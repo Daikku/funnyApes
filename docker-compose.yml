@@ -2,18 +2,16 @@ version: '3.8'
 
 services:
   web:
-    build:
-      context: ./
-      dockerfile: backend/Dockerfile
+    build: ./
     command: >
       sh -c "python manage.py collectstatic --noinput &&
-             gunicorn --workers=${GUNICORN_WORKERS_COUNT:-6} main.wsgi:application -b 0.0.0.0:8000"
+             gunicorn --workers=${GUNICORN_WORKERS_COUNT:-6} backend.wsgi:application -b 0.0.0.0:8000"
     ports:
       - 5432
     expose:
       - 8000
     volumes:
-      - ./backend:/home/app
+      - ./:/home/app
       - static_volume:/home/app/staticfiles
       - media_volume:/home/app/mediafiles
     env_file:

@@ -14,13 +14,16 @@ INSTALLED_APPS = [
 
     # Third party apps
     "rest_framework",
+    "corsheaders",
 
     # Local apps
+    "api_payments",
 ]
 
 MIDDLEWARE = [
     "django.middleware.security.SecurityMiddleware",
     "django.contrib.sessions.middleware.SessionMiddleware",
+    "corsheaders.middleware.CorsMiddleware",
     "django.middleware.common.CommonMiddleware",
     "django.middleware.csrf.CsrfViewMiddleware",
     "django.contrib.auth.middleware.AuthenticationMiddleware",
@@ -32,8 +35,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.getenv("DJANGO_SECRET_KEY")
 DEBUG = int(os.getenv("DJANGO_DEBUG", default=0))
 ALLOWED_HOSTS = os.getenv("DJANGO_ALLOWED_HOSTS", default="").split(" ")
-ROOT_URLCONF = "main.urls"
-WSGI_APPLICATION = "main.wsgi.application"
+ROOT_URLCONF = "backend.urls"
+WSGI_APPLICATION = "backend.wsgi.application"
 
 # General
 APPEND_SLASH = True
@@ -50,6 +53,10 @@ USE_L10N = True
 
 USE_TZ = True
 TIME_ZONE = "Europe/Moscow"
+
+# Cors
+CORS_ORIGIN_ALLOW_ALL = True
+CORS_ALLOW_CREDENTIALS = True
 
 # Postgres
 DATABASES = {
@@ -79,7 +86,7 @@ MEDIA_URL = "/media/"
 TEMPLATES = [
     {
         "BACKEND": "django.template.backends.django.DjangoTemplates",
-        "DIRS": [],
+        "DIRS": [os.path.join(BASE_DIR, "templates")],
         "APP_DIRS": True,
         "OPTIONS": {
             "context_processors": [
