@@ -1,4 +1,49 @@
 {% extends 'base.html' %}
+{% load static %}
 
 {% block content %}
-{% endblock content %}
+        <div class="main-container">
+            <main class="content" role="main">
+                <section class="bg-header">
+                    <div class="text-header">
+                        <h1 class="text-header">CryptoFunnyApes</h1><br>
+                        <P class="text__little"></P>
+                    </div>
+                    <div class="bg__light"></div>
+                </section>
+                <section class="description__wrap" id="description">
+                    <div class="description__back">
+                        <div class="description__text">
+                            Описание проекта
+                        </div>
+                    </div>
+                </section>
+                <section class="collection__wrap">
+                    <div class="collection__square"></div>
+                    <div class="collection__image" id="collection">
+                            <div class="collection__button" >
+                                <button class="collection__button_link" onclick="window.location.href='#'" >
+                                    Купить на Binance
+                                </button>
+                            </div>
+                        </div>
+                </section>
+                <section class="questions__wrap" id="questions">
+                    <div class="question__spoiler">
+                        <details class="spoiler__title">
+                            <summary>Вопрос 1</summary>
+                            <div class="spoiler__hidden">Ответ на вопрос 1</div>
+                        </details>
+                        <details class="spoiler__title">
+                            <summary>Вопрос 2</summary>
+                            <div class="spoiler__hidden">Ответ на вопрос 2</div>
+                        </details>
+                        <details class="spoiler__title">
+                            <summary>Вопрос 3</summary>
+                            <div class="spoiler__hidden">Ответ на вопрос 3</div>
+                        </details>
+                    </div>
+                </section>
+            </main>
+        </div>
+{% endblock content%}

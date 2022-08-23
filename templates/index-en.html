@@ -10,11 +10,7 @@
     <link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
     <link rel="stylesheet" href="{% static 'css/adaptive.css' %}" type="text/css">
 
-    <title>{% block title %}Crypto Funny Apes{% endblock title%}</title>
-
-    <link rel="icon" href="/favicon.ico">
-    <link rel="icon" href="/favicon.svg" type="image/svg+xml">
-    <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+    <title>Crypto Funny Apes</title>
 
     <meta property="og:title" content="Crypto Funny Apes">
     <meta property="og:type" content="website">
@@ -23,7 +19,6 @@
     <meta property="og:image" content="#">
 </head>
 <body>
-    {% block header %}
     <header class="header">
         <div class="wrapper__my">
             <div class="header__wrapper">
@@ -36,16 +31,16 @@
                     <div class="nav__menu">
                         <ul class="menu__list">
                             <li class="menu__item">
-                                <a href="#description" class="menu__link">О нас</a>
+                                <a href="#description" class="menu__link">About us</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">Новости</a>
+                                <a href="#" class="menu__link">News</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#collection" class="menu__link">Коллекция</a>
+                                <a href="#collection" class="menu__link">Collection</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#questions" class="menu__link">Вопросы</a>
+                                <a href="#questions" class="menu__link">Questions</a>
                             </li>
                         </ul>
                     </div>
@@ -67,27 +62,67 @@
                     </ul>
                 </div>
                 <div class="language">
-                    <label>
-                        <select id="lang__selector" onchange="if (this.value) window.location.href = 'http://localhost:8000/' + this.value">
-                            <option value=" " selected="selected">ru</option>
-                            <option value="en/">en</option>
-                        </select>
-                    </label>
+                    <label for="lang__selector"></label>
+                    <select id="lang__selector" onchange="if (this.value) window.location.href = 'http://localhost:8000/' + this.value">
+                        <option value=" " selected="selected">ru</option>
+                        <option value="en/">en</option>
+                    </select>
                 </div>
                 <div class="header__button" >
                     <button class="header__button_link" onclick="window.location.href='#'" >
-                        Купить на Binance
+                        Buy on Binance
                     </button>
                 </div>
             </div>
         </div>
     </header>
-    {% endblock header %}
-    {% block content %}
-    {% endblock content%}
+    <div class="main-container">
+            <main class="content" role="main">
+                <section class="bg-header">
+                    <div class="text-header">
+                        <h1 class="text-header">CryptoFunnyApes</h1><br>
+                        <P class="text__little"></P>
+                    </div>
+                    <div class="bg__light"></div>
+                </section>
+                <section class="description__wrap" id="description">
+                    <div class="description__back">
+                        <div class="description__text">
+                            Project description
+                        </div>
+                    </div>
+                </section>
+                <section class="collection__wrap">
+                    <div class="collection__square"></div>
+                    <div class="collection__image" id="collection">
+                            <div class="collection__button" >
+                                <button class="collection__button_link" onclick="window.location.href='#'" >
+                                    Buy on Binance
+                                </button>
+                            </div>
+                        </div>
+                </section>
+                <section class="questions__wrap" id="questions">
+                    <div class="question__spoiler">
+                        <details class="spoiler__title">
+                            <summary>Question 1</summary>
+                            <div class="spoiler__hidden">Answer on question 1</div>
+                        </details>
+                        <details class="spoiler__title">
+                            <summary>Question 2</summary>
+                            <div class="spoiler__hidden">Answer on question 2</div>
+                        </details>
+                        <details class="spoiler__title">
+                            <summary>Question 3</summary>
+                            <div class="spoiler__hidden">Answer on question 3</div>
+                        </details>
+                    </div>
+                </section>
+            </main>
+    </div>
     <div class="footer">
         <footer class="footer__wrap">
-            <p class="footer__text">Контакты</p>
+            <p class="footer__text">Contacts</p>
             <div class="footer__square"></div>
             <div class="footer__links">
                     <a target="_blank" href="#"><svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 12">
@@ -98,12 +133,12 @@
                         </svg>
                     </a>
             </div>
-            <div class="footer__letter">
-                <p class="text__right">Все права защищены. (c) Copyright 2022</p>
-                <a class="link__policy">Политика конфиденциальности</a>
+            <div class="footer__letter_en">
+                <p class="text__right">All Right Reserved. (c) Copyright 2022</p>
+                <a class="link__policy">Privacy Policy</a>
             </div>
         </footer>
     </div>
-<script src="{% static 'js/main.js' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

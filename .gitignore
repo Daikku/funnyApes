@@ -1,5 +1,6 @@
 __pycache__
 .idea
+.bash_history
 *.pyc
 *.sqlite3
 *.orig
