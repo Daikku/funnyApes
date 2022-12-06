@@ -1,13 +1,9 @@
 //<==================Смена языка и свойство selected==================>
 
-var url = window.location.href;
-var urlsplit = url.split("/");
-var lang = urlsplit[3]; // выбираем последнюю часть url
-if (lang === 'en')
-{
-    document.querySelector("#lang__selector > option[selected]").removeAttribute("selected"); // снимаем selected с value=" "
-    document.querySelector("#lang__selector > option[value='en/']").setAttribute("selected", "selected"); // ставим selected на value="en/"
-}
+$(".item-lang").click(function() {
+  $(".item-lang").removeClass("active")
+  $(this).addClass("active")
+})
 
 //<===================================================================>
 
@@ -72,11 +68,72 @@ let elements3 = document.querySelectorAll('.collection__wrap');
 for (let elm of elements3) {
   observer.observe(elm);
 }
+// появление кнопки со ссылкой
+let elements4 = document.querySelectorAll('.collection__button');
+for (let elm of elements4) {
+  observer.observe(elm);
+}
+// поялвение области с вопросами
+let elements5 = document.querySelectorAll('.questions__wrap');
+for (let elm of elements5) {
+  observer.observe(elm);
+}
+let elements6 = document.querySelectorAll('.spoiler__title');
+for (let elm of elements6) {
+  observer.observe(elm);
+}
+// появление области с целями
+let elements7 = document.querySelectorAll('.objectives__wrap');
+for (let elm of elements7) {
+  observer.observe(elm);
+}
+// появление области со ссылками
+let elements8 = document.querySelectorAll('.socials-link__wrap');
+for (let elm of elements8) {
+  observer.observe(elm);
+}
+// появление области с обратной связью
+let elements9 = document.querySelectorAll('.callback__wrap');
+for (let elm of elements9) {
+  observer.observe(elm);
+}
+// появление таймера
+let elements10 = document.querySelectorAll('.timer__square');
+for (let elm of elements10) {
+  observer.observe(elm);
+}
+// появление таймера
+let elements11 = document.querySelectorAll('.users-table__square');
+for (let elm of elements11) {
+  observer.observe(elm);
+}
+
 //<===================================================================>
 
 //<=================Добавление анимаций для кнопки====================>
 
-$('.collection__button_link').addClass("light");
-$('.header__button_link').addClass("light");
+$('.collection__button_link').addClass("diagonal_swipe_left");
+$('.header__button_link').addClass("diagonal_swipe_left");
+
+//<===================================================================>
+
+//<================Добавление кнопки прокрутки наверх=================>
+
+$(document).ready(function(){
+
+$(window).scroll(function(){
+if ($(this).scrollTop() > 200) {
+$('.scroll_up').fadeIn();
+} else {
+$('.scroll_up').fadeOut();
+}
+});
+
+$('.scroll_up').click(function(){
+$("html, body").animate({ scrollTop: 0 }, 600);
+return false;
+});
+
+});
 
 //<===================================================================>

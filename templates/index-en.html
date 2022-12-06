@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, user-scalable=yes, target-densityDpi=device-dpi">
     <meta name="MobileOptimized" content="360">
     <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
@@ -12,10 +12,18 @@
 
     <title>Crypto Funny Apes</title>
 
+    <link rel="apple-touch-icon" sizes="180x180" href="{% static 'img/favicons/apple-touch-icon.png' %}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{% static 'img/favicons/favicon-32x32.png' %}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{% static 'img/favicons/favicon-16x16.png' %}">
+    <link rel="manifest" href="{% static 'img/favicons/site.webmanifest' %}">
+    <link rel="mask-icon" href="{% static 'img/favicons/safari-pinned-tab.svg' %}" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#603cba">
+    <meta name="theme-color" content="#ffffff">
+
     <meta property="og:title" content="Crypto Funny Apes">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://funnyapes/">
-    <meta property="og:description" content="A simple HTML5 Template for new projects.">
+    <meta property="og:url" content="https://cryptounnyapes.com/">
+    <meta property="og:description" content="This website is used on the NFT project.">
     <meta property="og:image" content="#">
 </head>
 <body>
@@ -34,7 +42,7 @@
                                 <a href="#description" class="menu__link">About us</a>
                             </li>
                             <li class="menu__item">
-                                <a href="#" class="menu__link">News</a>
+                                <a href="#objectives" class="menu__link">Objectives</a>
                             </li>
                             <li class="menu__item">
                                 <a href="#collection" class="menu__link">Collection</a>
@@ -45,6 +53,7 @@
                         </ul>
                     </div>
                 </nav>
+                <!---
                 <div class="header__socials">
                     <ul class="dr-socials flex">
                         <li class="socials_icons">
@@ -61,12 +70,10 @@
                         </li>
                     </ul>
                 </div>
+                --->
                 <div class="language">
-                    <label for="lang__selector"></label>
-                    <select id="lang__selector" onchange="if (this.value) window.location.href = 'http://localhost:8000/' + this.value">
-                        <option value=" " selected="selected">ru</option>
-                        <option value="en/">en</option>
-                    </select>
+                    <a href="http://localhost:8000/" class="language__ru item-lang">RU</a>
+                    <a class="language__eng item-lang active">ENG</a>
                 </div>
                 <div class="header__button" >
                     <button class="header__button_link" onclick="window.location.href='#'" >
@@ -85,50 +92,223 @@
                     </div>
                     <div class="bg__light"></div>
                 </section>
+                <!---
+                <section class="timer__wrap">
+                    <div class="timer__square">
+                        <script src="//megatimer.ru/get/0815497fa36729f425be8990f5f0bcc1.js"></script>
+                    </div>
+                </section>
+                --->
                 <section class="description__wrap" id="description">
                     <div class="description__back">
+                        <div class="description__image"></div>
                         <div class="description__text">
-                            Project description
+                            <h1>Crypto Funny Apes</h1>
+                            This is an exclusive collection of 4444 NFT created on the Binance.
+                            <br><br>
+                            By purchasing CFA NFT, you become a co-owner of Metaverse.
+                            The proceeds from the project will be distributed among all NFT owners.<br><br>
+                            We all know the sensational Bored Apes project.
+                            We present you Funny Apes who enjoy life and do not know anything about sadness
                         </div>
+                    </div>
+                </section>
+                <section class="socials-link__wrap">
+                    <div class="socials-link">
+                        <a target="_blank" href="https://discord.gg/Te84BNQtcK"><svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 12">
+                        <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
+                        </svg></a>
+                        <a target="_blank" href="https://t.me/FunnyApes">
+                            <svg xmlns="http://www.w3.org/2000/svg" id="telegram__footer" width="30" height="30" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                            </svg>
+                        </a>
                     </div>
                 </section>
                 <section class="collection__wrap">
                     <div class="collection__square"></div>
-                    <div class="collection__image" id="collection">
-                            <div class="collection__button" >
-                                <button class="collection__button_link" onclick="window.location.href='#'" >
-                                    Buy on Binance
-                                </button>
+                    <div class="collection__image">
+                        <div class="collection__link" id="collection"></div>
+                        <div class="collection__button" >
+                            <button class="collection__button_link" onclick="window.location.href='#'" >
+                                Buy on Binance
+                            </button>
+                        </div>
+                    </div>
+                </section>
+                <section class="users-table__wrap">
+                    <div class="table__title">Top holders of the collection
+                        <div class="table__title-grad">7 days</div>
+                    </div>
+                    <div class="users-table__square">
+                        <div class="users-table__title">
+                            <div class="users-table__title-1">Top Holders</div>
+                            <div class="users-table__title-2">Number of NFT</div>
+                        </div>
+                        <div class="users-table__content">
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <img src="{% static 'img/1place.webp' %}">
+                                        <div class="users__name">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <img src="{% static 'img/2place.webp' %}">
+                                        <div class="users__name">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <img src="{% static 'img/3place.webp' %}">
+                                        <div class="users__name">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <div class="top-place">4</div>
+                                        <div class="users__name not-top">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <div class="top-place">5</div>
+                                        <div class="users__name not-top">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <div class="top-place">6</div>
+                                        <div class="users__name not-top">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <div class="top-place">7</div>
+                                        <div class="users__name not-top">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <div class="top-place">8</div>
+                                        <div class="users__name not-top">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <div class="top-place">9</div>
+                                        <div class="users__name not-top">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
+                            </div>
+                            <div class="users-table__hover">
+                                <div class="users-table__user">
+                                    <div class="user__inf">
+                                        <div class="top-place two-digit">10</div>
+                                        <div class="users__name not-top">xxxxxxxxx</div>
+                                    </div>
+                                    <div class="users__nft">1000</div>
+                                </div>
                             </div>
                         </div>
+                    </div>
+                </section>
+                <section class="objectives__wrap" id="objectives">
+                    <h1 class="objectives__title">Project objectives</h1>
+                    <div class="objectives__content">
+                        <div class="objectives__line">
+                            <div class="objectives__line-item">1</div>
+                            <div class="objectives__line-item">2</div>
+                            <div class="objectives__line-item">3</div>
+                            <div class="objectives__line-item">4</div>
+                            <div class="objectives__line-item">5</div>
+                        </div>
+                        <div class="objectives__text objectives__text_en">
+                            <div class="objectives__text-item">Creating a full-fledged ecosystem in WEB 3.0</div>
+                            <div class="objectives__text-item">Creating a game with which you can earn money without leaving home.</div>
+                            <div class="objectives__text-item center-objective_en">Development of a strong community.</div>
+                            <div class="objectives__text-item">Distribution of project profits among all NFT owners.</div>
+                            <div class="objectives__text-item">Opening of offices in St. Petersburg and Moscow.</div>
+                        </div>
+                    </div>
+                </section>
+                <section class="callback__wrap">
+                    <div class="callback__content">
+                        <div class="callback__square">
+                            <div class="callback__text">Project News</div>
+                            <div class="callback__links">
+                                <a target="_blank" href="https://t.me/FunnyApes">
+                                    <svg xmlns="http://www.w3.org/2000/svg" id="telegram__footer-call" width="30" height="30" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="callback__square">
+                            <div class="callback__text">Commercial offers, cooperation and communication with support</div>
+                            <div class="callback__links">
+                                <a href="mailto:cryptofunnyapes@mail.ru" class="callback__links-mail">cryptofunnyapes@mail.ru</a>
+                            </div>
+                        </div>
+                    </div>
                 </section>
                 <section class="questions__wrap" id="questions">
                     <div class="question__spoiler">
                         <details class="spoiler__title">
-                            <summary>Question 1</summary>
-                            <div class="spoiler__hidden">Answer on question 1</div>
+                            <summary>Project launch</summary>
+                            <div class="spoiler__hidden">The official release date of the NFT collection will be announced on our social networks.</div>
                         </details>
                         <details class="spoiler__title">
-                            <summary>Question 2</summary>
-                            <div class="spoiler__hidden">Answer on question 2</div>
+                            <summary>Where can I buy NFT?</summary>
+                            <div class="spoiler__hidden">Crypto Funny Games NFT will be released only on the Binance platform.</div>
                         </details>
                         <details class="spoiler__title">
-                            <summary>Question 3</summary>
-                            <div class="spoiler__hidden">Answer on question 3</div>
+                            <summary>How much will NFT cost?</summary>
+                            <div class="spoiler__hidden">The collection will be divided into 4 parts.
+                                                        1st drop - 29$; 2nd drop - 39$; 3th drop - 49$; 4th drop - 99$</div>
+                        </details>
+                        <details class="spoiler__title">
+                            <summary>How can I contact you?</summary>
+                            <div class="spoiler__hidden">You can send us any questions, commercial proposals or new ideas by e-mail <strong>cryptofunnyapes@mail.ru</strong></div>
                         </details>
                     </div>
                 </section>
             </main>
     </div>
+    <a href="#" class="scroll_up"></a>
     <div class="footer">
         <footer class="footer__wrap">
             <p class="footer__text">Contacts</p>
             <div class="footer__square"></div>
             <div class="footer__links">
-                    <a target="_blank" href="#"><svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 12">
+                    <a target="_blank" href="https://discord.gg/Te84BNQtcK"><svg xmlns="http://www.w3.org/2000/svg"  width="22" height="22" fill="currentColor" class="bi bi-discord" viewBox="0 0 16 12">
                     <path d="M13.545 2.907a13.227 13.227 0 0 0-3.257-1.011.05.05 0 0 0-.052.025c-.141.25-.297.577-.406.833a12.19 12.19 0 0 0-3.658 0 8.258 8.258 0 0 0-.412-.833.051.051 0 0 0-.052-.025c-1.125.194-2.22.534-3.257 1.011a.041.041 0 0 0-.021.018C.356 6.024-.213 9.047.066 12.032c.001.014.01.028.021.037a13.276 13.276 0 0 0 3.995 2.02.05.05 0 0 0 .056-.019c.308-.42.582-.863.818-1.329a.05.05 0 0 0-.01-.059.051.051 0 0 0-.018-.011 8.875 8.875 0 0 1-1.248-.595.05.05 0 0 1-.02-.066.051.051 0 0 1 .015-.019c.084-.063.168-.129.248-.195a.05.05 0 0 1 .051-.007c2.619 1.196 5.454 1.196 8.041 0a.052.052 0 0 1 .053.007c.08.066.164.132.248.195a.051.051 0 0 1-.004.085 8.254 8.254 0 0 1-1.249.594.05.05 0 0 0-.03.03.052.052 0 0 0 .003.041c.24.465.515.909.817 1.329a.05.05 0 0 0 .056.019 13.235 13.235 0 0 0 4.001-2.02.049.049 0 0 0 .021-.037c.334-3.451-.559-6.449-2.366-9.106a.034.034 0 0 0-.02-.019Zm-8.198 7.307c-.789 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.45.73 1.438 1.613 0 .888-.637 1.612-1.438 1.612Zm5.316 0c-.788 0-1.438-.724-1.438-1.612 0-.889.637-1.613 1.438-1.613.807 0 1.451.73 1.438 1.613 0 .888-.631 1.612-1.438 1.612Z"/>
                     </svg></a>
-                    <a target="_blank" href="#">
+                    <a target="_blank" href="https://t.me/FunnyApes">
                         <svg xmlns="http://www.w3.org/2000/svg" id="telegram__footer" width="30" height="30" fill="currentColor" class="bi bi-telegram" viewBox="0 0 16 16"><path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM8.287 5.906c-.778.324-2.334.994-4.666 2.01-.378.15-.577.298-.595.442-.03.243.275.339.69.47l.175.055c.408.133.958.288 1.243.294.26.006.549-.1.868-.32 2.179-1.471 3.304-2.214 3.374-2.23.05-.012.12-.026.166.016.047.041.042.12.037.141-.03.129-1.227 1.241-1.846 1.817-.193.18-.33.307-.358.336a8.154 8.154 0 0 1-.188.186c-.38.366-.664.64.015 1.088.327.216.589.393.85.571.284.194.568.387.936.629.093.06.183.125.27.187.331.236.63.448.997.414.214-.02.435-.22.547-.82.265-1.417.786-4.486.906-5.751a1.426 1.426 0 0 0-.013-.315.337.337 0 0 0-.114-.217.526.526 0 0 0-.31-.093c-.3.005-.763.166-2.984 1.09z"/>
                         </svg>
                     </a>
